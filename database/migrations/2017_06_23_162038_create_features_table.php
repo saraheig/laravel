@@ -23,13 +23,13 @@ class CreateFeaturesTable extends Migration
         });
         
         // Add features in the table
-        $feature1 = ['name' => 'Plage', 'description' => 'Très joli endroit estival',
+        $feature1 = ['name' => 'Beach', 'description' => 'Nice place in summer',
             'coordLat' => '46.78485', 'coordLng' => '6.65240'];
         DB::table('features')->insert($feature1);
-        $feature2 = ['name' => 'Ecole', 'description' => 'Un endroit très studieux',
+        $feature2 = ['name' => 'School', 'description' => 'A serious place',
             'coordLat' => '46.77895', 'coordLng' => '6.65867'];
         DB::table('features')->insert($feature2);
-        $feature3 = ['name' => 'Château', 'description' => 'A voir absolument !',
+        $feature3 = ['name' => 'Castle', 'description' => 'A lot of things to see',
             'coordLat' => '46.77845', 'coordLng' => '6.64157'];
         DB::table('features')->insert($feature3);
     }
