@@ -18,10 +18,20 @@ class CreateFeaturesTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('description');
-            $table->float('coordX', 10, 8);
-            $table->float('coordY', 10, 8);
-            $table->timestamps();
+            $table->float('coordLat', 7, 5);
+            $table->float('coordLng', 6, 5);
         });
+        
+        // Add features in the table
+        $feature1 = ['name' => 'Plage', 'description' => 'Très joli endroit estival',
+            'coordLat' => '46.78485', 'coordLng' => '6.65240'];
+        DB::table('features')->insert($feature1);
+        $feature2 = ['name' => 'Ecole', 'description' => 'Un endroit très studieux',
+            'coordLat' => '46.77895', 'coordLng' => '6.65867'];
+        DB::table('features')->insert($feature2);
+        $feature3 = ['name' => 'Château', 'description' => 'A voir absolument !',
+            'coordLat' => '46.77845', 'coordLng' => '6.64157'];
+        DB::table('features')->insert($feature3);
     }
 
     /**
@@ -31,6 +41,6 @@ class CreateFeaturesTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('features');
     }
 }
