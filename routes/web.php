@@ -15,4 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/features-json', 'WebServiceController@index');
+// Route::get('/features-json', 'FeatureController@index');
+
+// All routes for the features resource
+Route::resource('/features', 'FeatureController');
