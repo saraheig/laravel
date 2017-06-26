@@ -26,5 +26,6 @@
             <span class="bg-success">{{ $errors->first('longitude') }}</span>
         </div><br/>
         <input type="submit" class="btn btn-success" value="Save">
+        <a href="{{ route('features.index') }}" class="btn btn-success">See alerts</a>
     </form>
 @endsection
