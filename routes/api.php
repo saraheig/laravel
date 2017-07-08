@@ -25,6 +25,6 @@ $api->version('v1', [], function (Router $api) {
 });
 
 $api->version('v1', [], function (Router $api) {
-    $api->post('new', 'App\Http\Controllers\Api\V1\FeatureController@store');
+    $api->post('features/create', 'App\Http\Controllers\Api\V1\FeatureController@store');
 });
 
