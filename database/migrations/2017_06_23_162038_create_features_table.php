@@ -50,7 +50,7 @@ class CreateFeaturesTable extends Migration
         $feature9 = ['name' => 'Tennis club', 'description' => 'Time to move!',
             'coordLat' => '46.78433', 'coordLng' => '6.64691'];
         DB::table('features')->insert($feature9);
-        $feature10 = ['name' => '"Les Bains"', 'description' => 'Let\'s relax!',
+        $feature10 = ['name' => 'Thermal centre', 'description' => 'Let\'s relax!',
             'coordLat' => '46.77164', 'coordLng' => '6.64809'];
         DB::table('features')->insert($feature10);
     }
