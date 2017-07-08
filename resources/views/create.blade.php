@@ -1,5 +1,7 @@
 @extends('layout')
 @section('content')
+    <a href="{{ route('features.index') }}" class="btn btn-success">See alerts</a><br/><br/>
+
     <h2>Create an alert</h2>
 
     <form method="POST" name="formulaire" action="{{ route('features.store') }}">
@@ -26,6 +28,5 @@
             <span class="bg-success">{{ $errors->first('longitude') }}</span>
         </div><br/>
         <input type="submit" class="btn btn-success" value="Save">
-        <a href="{{ route('features.index') }}" class="btn btn-success">See alerts</a>
     </form>
 @endsection

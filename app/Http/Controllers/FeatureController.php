@@ -13,7 +13,7 @@ class FeatureController extends Controller
     public function index() {
         // Get all features in the features table (see database)
         $features = DB::table('features')->get();
-        return $features; // Json format
+        return view('index')->with('features', $features);
     }
     
     // Method to add a new feature through a form

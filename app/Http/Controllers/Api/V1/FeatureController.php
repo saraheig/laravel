@@ -14,12 +14,13 @@ use Illuminate\Routing\Controller;
 
 class FeatureController extends Controller
 {
-
+    // Index method to see all current alerts 
     public function index() {
         $features = DB::table('features')->get();
-        return $features;
+        return $features; // JSON format
     }
-
+    
+    // Store method to store a new feature in the database
     public function store(FeatureStoreRequest $request) {
         $feature = new Feature();
         $feature->name = $request->name;

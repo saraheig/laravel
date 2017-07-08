@@ -8,6 +8,7 @@
     </head>
     <body>
         <div class="container-fluid">
+            <h1>AltertUs</h1>
             @yield('content')
         </div>
     </body>
